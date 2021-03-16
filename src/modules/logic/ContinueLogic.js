@@ -1,5 +1,5 @@
 import StartLogic from "./StartLogic";
-import countTimer from "../store/timer";
+import countTimer from "../../store/timer";
 
 export default class ContinueLogic {
 
@@ -17,6 +17,8 @@ export default class ContinueLogic {
             this.timer.isEnabled = true
         }
 
+        this.timer.canContinue = false
+
         let isFinish = this.timer.currentTimer <= 0;
         if (isFinish) {
             this.timer.isEnabled = false
@@ -28,6 +30,6 @@ export default class ContinueLogic {
     }
 
     getEnableStatus() {
-        return this.timer.isEnabled
+        return !this.timer.canContinue
     }
 }

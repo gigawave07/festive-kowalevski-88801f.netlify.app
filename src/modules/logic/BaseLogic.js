@@ -3,7 +3,7 @@ import StopLogic from "./StopLogic";
 import ResetLogic from "./ResetLogic";
 import CaptureLogic from "./CaptureLogic";
 import ContinueLogic from "./ContinueLogic";
-import CONSTANT from "../modules/common/const";
+import CONSTANT from "../common/const";
 
 export default class BaseLogic {
 

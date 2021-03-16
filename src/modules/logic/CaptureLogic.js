@@ -1,11 +1,9 @@
-import ResetLogic from "./ResetLogic";
-import countTimer from "../store/timer";
+import countTimer from "../../store/timer";
 
 export default class CaptureLogic {
 
     constructor() {
         this.timer = countTimer
-        this.resetLogic = new ResetLogic()
     }
 
     execute() {

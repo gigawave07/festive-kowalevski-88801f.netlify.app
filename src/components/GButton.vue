@@ -6,7 +6,7 @@
 
 <script>
     import countTimer from "../store/timer";
-    import BaseLogic from "../logic/BaseLogic";
+    import BaseLogic from "../modules/logic/BaseLogic";
     import props from "../modules/common/props";
 
     export default {

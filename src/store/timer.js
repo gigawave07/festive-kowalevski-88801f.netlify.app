@@ -5,7 +5,8 @@ const countTimer = reactive({
     currentTimer: 0,
     loop: 0,
     isEnabled: false,
-    captures: []
+    captures: [],
+    canContinue: false
 })
 
 export default countTimer

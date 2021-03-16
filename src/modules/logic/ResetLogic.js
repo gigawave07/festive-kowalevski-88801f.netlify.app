@@ -1,4 +1,4 @@
-import countTimer from "../store/timer";
+import countTimer from "../../store/timer";
 
 export default class ResetLogic {
 
@@ -14,6 +14,7 @@ export default class ResetLogic {
         this.timer.currentTimer = 0
         this.timer.isEnabled = false
         this.timer.captures = []
+        this.timer.canContinue = false
     }
 
     getEnableStatus() {

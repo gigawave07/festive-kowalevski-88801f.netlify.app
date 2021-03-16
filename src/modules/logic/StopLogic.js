@@ -1,4 +1,4 @@
-import countTimer from "../store/timer";
+import countTimer from "../../store/timer";
 
 export default class StopLogic {
 
@@ -13,6 +13,7 @@ export default class StopLogic {
     stopTimer() {
         clearTimeout(this.timer.loop)
         this.timer.isEnabled = false
+        this.timer.canContinue = true
     }
 
     getEnableStatus() {

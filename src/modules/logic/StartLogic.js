@@ -1,5 +1,5 @@
 import ResetLogic from "./ResetLogic";
-import countTimer from "../store/timer";
+import countTimer from "../../store/timer";
 
 export default class StartLogic {
 
@@ -13,7 +13,14 @@ export default class StartLogic {
     }
 
     startTimer() {
+
         if (!this.timer.isEnabled) {
+            if (isNaN(this.timer.inputTimer)) {
+                this.timer.currentTimer = 'Please input number'
+                this.timer.canContinue = false
+                return
+            }
+
             this.resetLogic.execute()
             this.timer.currentTimer = this.timer.inputTimer
             this.timer.isEnabled = true
@@ -22,6 +29,7 @@ export default class StartLogic {
         let isFinish = this.timer.currentTimer <= 0;
         if (isFinish) {
             this.timer.isEnabled = false
+            this.timer.canContinue = false
             return
         }
 
@@ -32,4 +40,5 @@ export default class StartLogic {
     getEnableStatus() {
         return this.timer.isEnabled
     }
+
 }
