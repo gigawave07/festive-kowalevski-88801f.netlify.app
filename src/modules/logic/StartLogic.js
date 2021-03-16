@@ -34,8 +34,8 @@ export default class StartLogic {
             return
         }
 
-        this.timer.currentTimer = +(this.timer.currentTimer - 0.1).toFixed(1)
-        this.timer.loop = setTimeout(() => this.startTimer(), 100)
+        this.timer.currentTimer = Number.parseFloat(this.timer.currentTimer - 0.01).toFixed(2)
+        this.timer.loop = setTimeout(() => this.startTimer(), 10)
     }
 
     getEnableStatus() {

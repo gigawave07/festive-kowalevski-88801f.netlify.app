@@ -13,20 +13,11 @@ export default class ContinueLogic {
     }
 
     continueTimer() {
-        if (!this.timer.isEnabled) {
-            this.timer.isEnabled = true
-        }
-
+        this.timer.isEnabled = true
         this.timer.canContinue = false
 
-        let isFinish = this.timer.currentTimer <= 0;
-        if (isFinish) {
-            this.timer.isEnabled = false
-            return
-        }
-
-        this.timer.currentTimer = +(this.timer.currentTimer - 0.1).toFixed(1)
-        this.timer.loop = setTimeout(this.startLogic.startTimer(), 100)
+        this.timer.currentTimer = Number.parseFloat(this.timer.currentTimer - 0.01).toFixed(2)
+        this.timer.loop = setTimeout(this.startLogic.startTimer(), 10)
     }
 
     getEnableStatus() {
