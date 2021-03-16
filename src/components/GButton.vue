@@ -5,7 +5,6 @@
 </template>
 
 <script>
-    import countTimer from "../store/timer";
     import BaseLogic from "../modules/logic/BaseLogic";
     import props from "../modules/common/props";
     import {computed} from "vue";
@@ -14,7 +13,6 @@
         name: "GButton",
         props,
         setup(props) {
-            const timer = countTimer
             const isEnabled = computed(() => logic.getEnableStatus())
             const logic = BaseLogic.createLogic(props.itemID)
 
@@ -23,7 +21,6 @@
             }
 
             return {
-                timer,
                 isEnabled,
                 logic,
                 execute
