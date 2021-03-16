@@ -14,9 +14,10 @@ export default class StartLogic {
 
     startTimer() {
 
-        if (!this.timer.isEnabled) {
-            if (isNaN(this.timer.inputTimer)) {
-                this.timer.currentTimer = 'Please input number'
+        const isFirstTime = !this.timer.isEnabled
+        if (isFirstTime) {
+            if (isNaN(this.timer.inputTimer) || this.timer.inputTimer <= 0 || this.timer.inputTimer > 60 * 5) {
+                this.timer.currentTimer = 'Input must be smaller than 5 mins'
                 this.timer.canContinue = false
                 return
             }
