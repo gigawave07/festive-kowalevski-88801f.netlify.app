@@ -17,7 +17,4 @@ export default class BaseLogic {
             [RESET]: new ResetLogic(),
         }[type]
     }
-
-    execute() {}
-
 }

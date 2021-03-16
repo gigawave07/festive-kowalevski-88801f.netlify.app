@@ -16,8 +16,7 @@ export default class ContinueLogic {
         this.timer.isEnabled = true
         this.timer.canContinue = false
 
-        this.timer.currentTimer = Number.parseFloat(this.timer.currentTimer - 0.01).toFixed(2)
-        this.timer.loop = setTimeout(this.startLogic.startTimer(), 10)
+        this.startLogic.startTimer()
     }
 
     getEnableStatus() {
