@@ -13,8 +13,8 @@
         name: "GButton",
         props,
         setup(props) {
-            const isEnabled = computed(() => logic.getEnableStatus())
             const logic = BaseLogic.createLogic(props.itemID)
+            const isEnabled = computed(() => logic.getEnableStatus())
 
             function execute() {
                 this.logic.execute()
