@@ -1,4 +1,6 @@
-Database Host	sql6.freemysqlhosting.net
-Database Name	sql6399784
-Database Username	sql6399784
-Database Password	FAfgvUIbfp
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://db4free.net:3306/codegym06db
+spring.datasource.username=codegym06db
+spring.datasource.password=codegym06db
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
